@@ -1,0 +1,112 @@
+@media all and (max-width : 1024px)  {
+
+}
+
+@media only screen and (max-width : 767px){
+  .slider{
+    .carousel-inner{
+      .carousel-text{
+        top:10%;
+        h1{
+          font-size: @baseFontSize * 2;
+        }
+        hr{
+          background-color: @green;
+          width:50%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 768px)   {
+  .navbar-collapse.collapse {
+    display: none !important;
+
+  }
+  .bg{
+    img{
+      top:0;
+    }
+  }
+  .hide-mobile{
+    display: block;
+  }
+  .navbar-inverse .brand{
+    float:none;
+    text-align: center;
+    img{
+      width:50%;
+    }
+  }
+  .carousel{
+    height:auto !important;
+
+  }
+
+  .services__section{
+    .carousel-inner{
+      padding:10px;
+    }
+    .carousel-indicators{
+      display: none;
+
+    }
+    .carousel-control{
+      top:50%;
+    }
+    h2{
+      padding:20px;
+      text-align: center;
+      font-size: @baseFontSize * 3;
+    }
+    .two{
+      float:none;
+    }
+    .one,.two,.three{
+      height:auto;
+    }
+  }
+
+  .callout{
+    padding: @basePadding;
+    h2{
+      font-size: 24px;
+    }
+  }
+  .area-padding{
+    padding: 0;
+  }
+
+  .content__section{
+    h2{
+      font-size: @baseFontSize * 2;
+    }
+    hr{
+      width:10%;
+    }
+  }
+  #contact{
+    text-align: center;
+    padding:10px;
+    img{
+      width:20%;
+
+    }
+  }
+  .clients__list {
+    li {
+      display: inline-block;
+      float: left;
+      width: 25%;
+      padding: 0 2px;
+    }
+  }
+  footer{
+    text-align: center;
+    ul{
+      float:none;
+      text-align: center;
+    }
+  }
+}
