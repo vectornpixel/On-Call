@@ -12,7 +12,7 @@ UsersControllers.controller('ViewUsersController', ['$scope', '$http',
 
 ]);
 
-// Declare View User Porfile Controller
+// Declare View User Profile Controller
 UsersControllers.controller('UserProfileController', ['$scope', '$routeParams', '$http',
     function($scope, $routeParams, $http) {
         $http.get('js/data/users/' + $routeParams.userId + '.json').success(function(data) {

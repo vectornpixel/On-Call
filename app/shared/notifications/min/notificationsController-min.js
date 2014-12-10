@@ -1,0 +1,1 @@
+onCallApp.factory("notificationService",function(){return{message:"the message",date:"the date",time:"the time",fromuser:"users name",accept:!1}}),onCallApp.controller("notifications",function(e,t){e.message=t.message,e.getMessage=function(e){t.getMessage(e)},e.fromuser=t.fromuser,e.getUser=function(e){t.getUser(e)}});

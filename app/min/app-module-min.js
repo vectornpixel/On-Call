@@ -1,1 +1,1 @@
-var onCallApp=angular.module("onCallApp",["ngRoute","ExploreControllers"]);
+var onCallApp=angular.module("onCallApp",[]);

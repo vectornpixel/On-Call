@@ -1,23 +1,34 @@
 // Create Users Controller
-var UsersControllers = angular.module('UsersControllers', []);
 
-// Declare View Users Controller
+//Post  A Service, web service
+onCallApp.factory('postFactory', function(){
+    return {title: 'the tite',
+            description: 'the description',
+            pricerange: 'the price range',
+            categories: 'the category'};
+});
 
-UsersControllers.controller('ViewUsersController', ['$scope', '$http',
-    function($scope, $http) {
-        $http.get('js/data/users.json').success(function(data) {
-            $scope.usersinfo = data;
-        });
+onCallApp.controller('postService', function($scope,postFactory) {
+        $scope.title = postFactory.title;
+        $scope.posttitle = function(title){
+            postFactory.posttitle(title);
+        };
+
+        $scope.description = postFactory.description;
+        $scope.postdescription = function(description){
+            postFactory.postdescription(description);
+        };
+
+        $scope.pricerange = postFactory.pricerange;
+        $scope.postprice = function(pricerange){
+            postFactory.postprice(pricerange);
+        };
+
+        $scope.categories = postFactory.categories;
+        $scope.postcategory = function(categories){
+            postFactory.postcategory(categories);
+        };
+
     }
 
-]);
-
-// Declare View User Porfile Controller
-UsersControllers.controller('UserProfileController', ['$scope', '$routeParams', '$http',
-    function($scope, $routeParams, $http) {
-        $http.get('js/data/users/' + $routeParams.userId + '.json').success(function(data) {
-            $scope.userinfo = data;
-        });
-
-    }
-]);
+);

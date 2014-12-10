@@ -3,12 +3,20 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <script type="text/javascript" src="libs/angular.min.js"></script>
-    <script type="text/javascript" src="libs/angular-route.min.js"></script>
+    <!-- BEGIN STYLESHEETS -->
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="assets/libs/angular.min.js"></script>
+    <!--<script type="text/javascript" src="assets/libs/angular-route.min.js"></script>-->
     <script type="text/javascript" src="app/app-module.js"></script>
-    <script type="text/javascript" src="app/app-routes.js"></script>
+    <!--script type="text/javascript" src="app/app-routes.js"></script>-->
+    <script type="text/javascript" src="app/components/postService/postserviceController.js"></script>
 </head>
 <body>
-
+<div ng-controller="postService">
+    <p>{{title}}</p>
+    <p>{{description}}</p>
+    <p>{{pricerange}}</p>
+    <p>{{categories}}</p>
+</div>
 </body>
 </html>
