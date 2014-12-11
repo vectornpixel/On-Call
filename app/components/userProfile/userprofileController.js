@@ -10,7 +10,7 @@ onCallApp.factory('profileFactory', function(){
             };
 });
 
-onCallApp.controller('userProfile', function($scope,profileFactory){
+onCallApp.controller('UserProfileController', function($scope,profileFactory){
     $scope.name = profileFactory.name;
     $scope.location = profileFactory.location;
     $scope.ratings = profileFactory.ratings;

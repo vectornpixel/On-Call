@@ -8,7 +8,7 @@ onCallApp.factory('postFactory', function(){
             categories: 'the category'};
 });
 
-onCallApp.controller('postService', function($scope,postFactory) {
+onCallApp.controller('PostServiceController', function($scope,postFactory) {
         $scope.title = postFactory.title;
         $scope.posttitle = function(title){
             postFactory.posttitle(title);
