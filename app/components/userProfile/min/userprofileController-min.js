@@ -1,1 +1,0 @@
-onCallApp.factory("profileFactory",function(){return{name:"First last name",location:"the location",ratings:"User ratings",email:"User Email",password:"User Password"}}),onCallApp.controller("userProfile",function(a,o){a.name=o.name,a.location=o.location,a.ratings=o.ratings,a.email=o.email,a.password=o.password});

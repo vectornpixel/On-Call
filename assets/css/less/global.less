@@ -1,7 +1,21 @@
 /*------------------------------------*\
 		$Global Variables
 \*------------------------------------*/
-@titleFont:'BebasNeue', sans-serif;
+@font-face {
+  font-family: 'ITC Avant Garde Std Bk';
+  src: url('../fonts/ITCAvantGardeStd-Bk.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/ITCAvantGardeStd-Bk.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/ITCAvantGardeStd-Bk.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/ITCAvantGardeStd-Bk.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/ITCAvantGardeStd-Bk.svg#52bc9fd504b621176d57f308965c98a4') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+body{
+  font-family: "ITC Avant Garde Std Bk";
+}
 @baseFontSize: 16px;
 @baseMargin: 10px;
 @basePadding: 10px;
@@ -9,8 +23,8 @@
 @fullwidth: 100%;
 
 
-@brand-primary:#dadada;
-@brand-secondary:#000;
+@brand-primary:#4e457c;
+@brand-secondary:#38b648;
 
 @white:#fff;
 @black:#000;

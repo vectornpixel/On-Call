@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="onCallApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- BEGIN STYLESHEETS -->
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="assets/libs/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/min/scripts-min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="assets/libs/gmaps.js"></script>
+    <style type="text/css">
+        #map {
+            width: 480px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+<!--<div ng-controller="PostServiceController">
+    <p>{{title}}</p>
+    <p>{{description}}</p>
+    <p>{{pricerange}}</p>
+    <p>{{categories}}</p>
+</div>-->
+<header>
+
+</header>
+<div class="container">
+
+        <div class="row">
+            <h2>Add Project</h2>
+            <p class="lead">
+                Add Project to find service providers.
+           </p>
+
+
+            <hr />
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <form role="form">
+                        <div class="form-group float-label-control">
+                            <label for="">Service Requested</label>
+                            <input type="text" class="form-control" placeholder="Service Requested">
+                        </div>
+                        <div class="form-group float-label-control">
+                            <label for="">Location</label>
+                            <input type="text" class="form-control" placeholder="Location">
+                        </div>
+                        <div class="form-group float-label-control">
+                            <label for="">Budget</label>
+                            <input type="text" class="form-control" placeholder="Budget">
+                        </div>
+                        <div class="form-group float-label-control">
+                            <label for="">Description</label>
+                            <textarea class="form-control" placeholder="Textarea" rows="4"></textarea>
+                        </div>
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
