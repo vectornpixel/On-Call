@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="onCallApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- BEGIN STYLESHEETS -->
+    <link href="assets/css/css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="assets/libs/angular.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="assets/libs/gmaps.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+</head>
+
+<body class="cbp-spmenu-push">
+<!--<div ng-controller="PostServiceController">
+    <p>{{title}}</p>
+    <p>{{description}}</p>
+    <p>{{pricerange}}</p>
+    <p>{{categories}}</p>
+    </div>-->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <h3><span><img src="assets/img/nam.png"></span>Lorens Goro</h3>
+    <a href="explore.html"><span><img src="assets/img/search.png"></span>EXPLORE</a>
+    <a href="profile.html"><span><img src="assets/img/project_list.png"></span>PROFILE</a>
+    <a href="settings.html"><span><img src="assets/img/setting.png"></span>SETTINGS</a>
+    <a href="#"><span><img src="assets/img/sign_out.png"></span>SIGNOUT</a>
+</nav>
+<div class="main">
+
+</div>
+<header>
+    <button id="showLeftPush" class="menu-btn"><img src="assets/img/icon.png"></button>
+    <div class="logo">
+
+        <h3><img src="assets/img/oncall_logo.png"> ONCALL</h3>
+    </div>
+
+</header>
+<div class="page">
+    <h1 class="text-center">PROFILE</h1>
+    <form id="profile">
+<div class="row">
+
+            <div class="form-group">
+                <label for="service">Service</label>
+                <select class="form-control" id="service">
+                    <option>Roofing</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Select Days Available</label><br>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="mon" value="option1"> Mon
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="tues" value="option2"> Tues
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="wed" value="option3"> Wed
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="thurs" value="option3"> Thurs
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="fri" value="option3"> Fri
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="sat" value="option3"> Sat
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="sun" value="option3"> Sun
+                </label>
+            </div>
+</div>
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <label for="fromdate">From</label>
+                    <select class="form-control" id="fromdate">
+                        <option>8:00AM</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <label for="todate">To</label>
+                    <select class="form-control" id="todate">
+                        <option>8:00PM</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <label for="withinmiles">Within</label>
+                    <select class="form-control" id="withinmiles">
+                        <option>25 Miles</option>
+                    </select>
+                </div>
+            </div>
+
+        <div class="form-group">
+            <label for="describeservice">Describe Service</label>
+            <textarea id="describeservice" class="form-control" rows="3"></textarea>
+        </div>
+
+            <button type="submit" class="buttons btn btn-default" id="submitprofile">Submit</button>
+
+
+</div>
+    </form>
+</div>
+
+</body>
+
+<script src="assets/js/classie.js"></script>
+<script>
+    var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+            showLeftPush = document.getElementById( 'showLeftPush' ),
+            body = document.body;
+
+    showLeftPush.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( body, 'cbp-spmenu-push-toright' );
+        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+        disableOther( 'showLeftPush' );
+    };
+
+    function disableOther( button ) {
+
+        if( button !== 'showLeftPush' ) {
+            classie.toggle( showLeftPush, 'disabled' );
+        }
+
+    }
+</script>
+</html>

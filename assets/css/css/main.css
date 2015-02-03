@@ -6253,6 +6253,7 @@ button.close {
 }
 body {
   font-family: "ITC Avant Garde Std Bk";
+  background-color: #383b61;
 }
 .centered {
   display: table;
@@ -6309,6 +6310,45 @@ body {
   .container {
     width: 480px;
   }
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}
+header {
+  background-color: #ffffff;
 }
 .logo {
   margin: 0 auto;
@@ -6461,13 +6501,29 @@ button {
     left: 190px;
   }
 }
+.home-screen .home-bg {
+  position: absolute;
+  z-index: -1;
+}
+.home-screen h3 {
+  color: #26a9d3;
+  letter-spacing: 4px;
+}
+.home-screen p {
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+.home-screen .home-nav {
+  position: absolute;
+  top: 50%;
+}
 .user_info {
   background-color: #4e457c;
   color: #ffffff;
   padding: 10px;
 }
 .user_info .user_icons li {
-  margin: 20px;
+  margin: 5px;
 }
 .user_info .user_photo {
   border: 5px solid #ffffff;
@@ -6480,13 +6536,53 @@ button {
   font-size: 18px;
   letter-spacing: 3px;
 }
-.buttons {
+.user_info button {
   background-color: #38b648;
+}
+#profile button,
+#settings button,
+#register button,
+#login button {
+  background-color: #28a7d2;
+}
+#profile label,
+#settings label,
+#register label,
+#login label {
+  font-weight: normal !important;
+}
+.page {
+  padding: 30px;
+}
+.page h1,
+.page H2 {
+  color: #28a7d2;
+  letter-spacing: 6px;
+  font-weight: 600;
+}
+.form-group label {
+  color: #28a7d2;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.form-control {
+  border: none;
+  background: #484a71;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  color: #ffffff;
+}
+.form-field:focus {
+  background: #dcdcdc;
+  color: #232323;
+}
+.buttons {
   border: none;
   color: #ffffff;
-  width: 500px;
+  width: 100%;
   border-radius: 0;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 800;
   letter-spacing: 2px;
   margin-left: auto;

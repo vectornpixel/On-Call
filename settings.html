@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="onCallApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- BEGIN STYLESHEETS -->
+    <link href="assets/css/css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="assets/libs/angular.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="assets/libs/gmaps.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+
+</head>
+<body class="cbp-spmenu-push">
+<!--<div ng-controller="PostServiceController">
+    <p>{{title}}</p>
+    <p>{{description}}</p>
+    <p>{{pricerange}}</p>
+    <p>{{categories}}</p>
+</div>-->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <h3><span><img src="assets/img/nam.png"></span>Lorens Goro</h3>
+    <a href="explore.html"><span><img src="assets/img/search.png"></span>EXPLORE</a>
+    <a href="profile.html"><span><img src="assets/img/project_list.png"></span>PROFILE</a>
+    <a href="settings.html"><span><img src="assets/img/setting.png"></span>SETTINGS</a>
+    <a href="#"><span><img src="assets/img/sign_out.png"></span>SIGNOUT</a>
+</nav>
+<div class="main">
+
+</div>
+<header>
+    <button id="showLeftPush" class="menu-btn"><img src="assets/img/icon.png"></button>
+    <div class="logo">
+
+        <h3><img src="assets/img/oncall_logo.png"> ONCALL</h3>
+    </div>
+
+</header>
+<div class="page">
+    <h1 class="text-center">SETTINGS</h1>
+<div class="row">
+    <form id="settings">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="businessname">Business Name</label>
+                <input type="text" class="form-control" id="businessname">
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" class="form-control" id="location">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+        <div class="form-group">
+            <label for="confirmpassword">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmpassword">
+        </div>
+            <div class="form-group">
+                <label for="uploadphoto">Upload Photo</label>
+                <input type="file" id="uploadphoto">
+            </div>
+            <!--<div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>-->
+            <button type="submit" class="buttons btn btn-default" id="submitsettings">Submit</button>
+
+    </form>
+</div>
+</div>
+
+</body>
+
+<script src="assets/js/classie.js"></script>
+<script>
+    var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+            showLeftPush = document.getElementById( 'showLeftPush' ),
+            body = document.body;
+
+    showLeftPush.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( body, 'cbp-spmenu-push-toright' );
+        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+        disableOther( 'showLeftPush' );
+    };
+
+    function disableOther( button ) {
+
+        if( button !== 'showLeftPush' ) {
+            classie.toggle( showLeftPush, 'disabled' );
+        }
+
+    }
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="onCallApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- BEGIN STYLESHEETS -->
+    <link href="assets/css/css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="assets/libs/angular.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="assets/libs/gmaps.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <h3><img src="assets/img/oncall_logo.png"> ONCALL</h3>
+    </div>
+
+</header>
+<div class="page">
+    <h1 class="text-center">REGISTER</h1>
+<div class="row">
+    <form id="register">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+        <div class="form-group">
+            <label for="confirmpassword">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmpassword">
+        </div>
+            <!--<div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>-->
+            <button type="submit" class="buttons btn btn-default" id="registerbtn">Submit</button>
+
+    </form>
+</div>
+</div>
+
+</body>
+
+</html>
