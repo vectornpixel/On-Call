@@ -1,1 +1,0 @@
-onCallApp.factory("profileFactory",function(){return{name:"Lorens Goro",company:"E&G Design",location:"Sterling Heights, MI",ratings:4,email:"lorensgoro@gmail.com",service:"Web Design",daysopen:{mon:!0,tues:!1,wed:!0,thurs:!0,fri:!0,sat:!0,sun:!0}}}),onCallApp.controller("ProfileController",function(o,n){o.name=n.name,o.location=n.location,o.ratings=n.ratings,o.email=n.email});

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="onCallApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- BEGIN STYLESHEETS -->
+    <link href="assets/css/css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="assets/libs/angular.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="assets/libs/angular-route.js"></script>
+    <script type="text/javascript" src="assets/libs/angular-resource.js"></script>
+    <script type="text/javascript" src="app/controllers/profileController.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="assets/libs/gmaps.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+
+</head>
+<body class="cbp-spmenu-push">
+
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <h3><span><img src="assets/img/nam.png"></span>Lorens Goro</h3>
+    <a href="explore.html"><span><img src="assets/img/search.png"></span>EXPLORE</a>
+    <a href="profile.html"><span><img src="assets/img/project_list.png"></span>PROFILE</a>
+    <a href="settings.html"><span><img src="assets/img/setting.png"></span>SETTINGS</a>
+    <a href="#"><span><img src="assets/img/sign_out.png"></span>SIGNOUT</a>
+</nav>
+
+<header>
+    <button id="showLeftPush" class="menu-btn"><img src="assets/img/icon.png"></button>
+    <div class="logo">
+
+        <h3><img src="assets/img/oncall_logo.png"> ONCALL</h3>
+    </div>
+
+</header>
+<div class="home-screen marginless no-padding">
+    <div class="home-bg">
+        <img src="assets/img/oncall_hero.jpg">
+    </div>
+    <div class="row home-nav">
+        <div class="col-xs-4">
+            <a href="#explore"><h2>EXPLORE</h2></a>
+        </div>
+        <div class="col-xs-4">
+
+        </div>
+        <div class="col-xs-4">
+            <a href="login.html"><h2>SIGN UP</h2></a>
+        </div>
+        <div class="text-center">
+            <h3>Find the right person for the job immediately</h3>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+<script>
+    var map = new GMaps({
+        el: '#map',
+        lat: -12.043333,
+        lng: -77.028333
+    });
+</script>
+<script src="assets/js/classie.js"></script>
+<script>
+    var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+            showLeftPush = document.getElementById( 'showLeftPush' ),
+            body = document.body;
+
+    showLeftPush.onclick = function() {
+        classie.toggle( this, 'active' );
+        classie.toggle( body, 'cbp-spmenu-push-toright' );
+        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+        disableOther( 'showLeftPush' );
+    };
+
+    function disableOther( button ) {
+
+        if( button !== 'showLeftPush' ) {
+            classie.toggle( showLeftPush, 'disabled' );
+        }
+
+    }
+</script>
+</html>

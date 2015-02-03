@@ -5,7 +5,7 @@ var UsersControllers = angular.module('UsersControllers', []);
 
 UsersControllers.controller('ViewUsersController', ['$scope', '$http',
     function($scope, $http) {
-        $http.get('js/data/users.json').success(function(data) {
+        $http.get('app/data/users.json').success(function(data) {
             $scope.usersinfo = data;
         });
     }
@@ -15,7 +15,7 @@ UsersControllers.controller('ViewUsersController', ['$scope', '$http',
 // Declare View User Profile Controller
 UsersControllers.controller('UserProfileController', ['$scope', '$routeParams', '$http',
     function($scope, $routeParams, $http) {
-        $http.get('js/data/users/' + $routeParams.userId + '.json').success(function(data) {
+        $http.get('app/data/users/' + $routeParams.userId + '.json').success(function(data) {
             $scope.userinfo = data;
         });
 
@@ -31,7 +31,7 @@ var BusinessControllers = angular.module('BusinessControllers', []);
 
 BusinessControllers.controller('ViewBusinessController', ['$scope', '$http',
     function($scope, $http) {
-        $http.get('js/data/businesses.json').success(function(data) {
+        $http.get('app/data/businesses.json').success(function(data) {
             $scope.clientsinfo = data;
         });
     }
@@ -41,7 +41,7 @@ BusinessControllers.controller('ViewBusinessController', ['$scope', '$http',
 // Declare View Businesses Profile Controller
 BusinessControllers.controller('BusinessProfileController', ['$scope', '$routeParams', '$http',
     function($scope, $routeParams, $http) {
-        $http.get('js/data/clients/' + $routeParams.businessId + '.json').success(function(data) {
+        $http.get('app/data/clients/' + $routeParams.businessId + '.json').success(function(data) {
             $scope.clientinfo = data;
         });
 
@@ -57,7 +57,7 @@ var ProjectsControllers = angular.module('ProjectsControllers', []);
 
 ProjectsControllers.controller('ViewProjectsController', ['$scope', '$http',
     function($scope, $http) {
-        $http.get('js/data/projects.json').success(function(data) {
+        $http.get('app/data/projects.json').success(function(data) {
             $scope.projectsinfo = data;
         });
     }
@@ -66,7 +66,7 @@ ProjectsControllers.controller('ViewProjectsController', ['$scope', '$http',
 
 ProjectsControllers.controller('ViewProjectController', ['$scope', '$routeParams', '$http',
     function($scope, $routeParams, $http) {
-        $http.get('js/data/clients/projects' + $routeParams.businessId + '-project.json').success(function(data) {
+        $http.get('app/data/clients/projects' + $routeParams.businessId + '-project.json').success(function(data) {
             $scope.projectinfo = data;
         });
 
@@ -81,7 +81,7 @@ var SettingsControllers = angular.module('SettingsControllers', []);
 
 SettingsControllers.controller('ViewSettingsController', ['$scope', '$http',
     function($scope, $http) {
-        $http.get('js/data/projects.json').success(function(data) {
+        $http.get('app/data/projects.json').success(function(data) {
             $scope.projectsinfo = data;
         });
     }
@@ -90,7 +90,7 @@ SettingsControllers.controller('ViewSettingsController', ['$scope', '$http',
 
 SettingsControllers.controller('ViewSettingsController', ['$scope', '$routeParams', '$http',
     function($scope, $routeParams, $http) {
-        $http.get('js/data/clients/projects' + $routeParams.businessId + '-project.json').success(function(data) {
+        $http.get('app/data/clients/projects' + $routeParams.businessId + '-project.json').success(function(data) {
             $scope.projectinfo = data;
         });
 

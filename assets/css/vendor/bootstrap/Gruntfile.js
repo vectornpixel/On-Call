@@ -18,9 +18,9 @@ module.exports = function (grunt) {
   var fs = require('fs');
   var path = require('path');
   var npmShrinkwrap = require('npm-shrinkwrap');
-  var generateGlyphiconsData = require('./grunt/bs-glyphicons-data-generator.js');
-  var BsLessdocParser = require('./grunt/bs-lessdoc-parser.js');
-  var generateRawFiles = require('./grunt/bs-raw-files-generator.js');
+  var generateGlyphiconsData = require('./grunt/bs-glyphicons-data-generator.app');
+  var BsLessdocParser = require('./grunt/bs-lessdoc-parser.app');
+  var generateRawFiles = require('./grunt/bs-raw-files-generator.app');
 
   // Project configuration.
   grunt.initConfig({
@@ -32,7 +32,7 @@ module.exports = function (grunt) {
             ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
             ' */\n',
-    // NOTE: This jqueryCheck code is duplicated in customizer.js; if making changes here, be sure to update the other copy too.
+    // NOTE: This jqueryCheck code is duplicated in customizer.app; if making changes here, be sure to update the other copy too.
     jqueryCheck: 'if (typeof jQuery === \'undefined\') { throw new Error(\'Bootstrap\\\'s JavaScript requires jQuery\') }\n\n',
 
     // Task configuration.
@@ -42,31 +42,31 @@ module.exports = function (grunt) {
 
     jshint: {
       options: {
-        jshintrc: 'js/.jshintrc'
+        jshintrc: 'app/.jshintrc'
       },
       grunt: {
         options: {
           jshintrc: 'grunt/.jshintrc'
         },
-        src: ['Gruntfile.js', 'grunt/*.js']
+        src: ['Gruntfile.app', 'grunt/*.app']
       },
       src: {
-        src: 'js/*.js'
+        src: 'app/*.app'
       },
       test: {
         options: {
-          jshintrc: 'js/tests/unit/.jshintrc'
+          jshintrc: 'app/tests/unit/.jshintrc'
         },
-        src: 'js/tests/unit/*.js'
+        src: 'app/tests/unit/*.app'
       },
       assets: {
-        src: ['docs/assets/js/_src/*.js', 'docs/assets/js/*.js', '!docs/assets/js/*.min.js']
+        src: ['docs/assets/app/_src/*.app', 'docs/assets/app/*.app', '!docs/assets/app/*.min.app']
       }
     },
 
     jscs: {
       options: {
-        config: 'js/.jscsrc'
+        config: 'app/.jscsrc'
       },
       grunt: {
         src: '<%= jshint.grunt.src %>'
@@ -92,20 +92,20 @@ module.exports = function (grunt) {
       },
       bootstrap: {
         src: [
-          'js/transition.js',
-          'js/alert.js',
-          'js/button.js',
-          'js/carousel.js',
-          'js/collapse.js',
-          'js/dropdown.js',
-          'js/modal.js',
-          'js/tooltip.js',
-          'js/popover.js',
-          'js/scrollspy.js',
-          'js/tab.js',
-          'js/affix.js'
+          'app/transition.app',
+          'app/alert.app',
+          'app/button.app',
+          'app/carousel.app',
+          'app/collapse.app',
+          'app/dropdown.app',
+          'app/modal.app',
+          'app/tooltip.app',
+          'app/popover.app',
+          'app/scrollspy.app',
+          'app/tab.app',
+          'app/affix.app'
         ],
-        dest: 'dist/js/<%= pkg.name %>.js'
+        dest: 'dist/app/<%= pkg.name %>.app'
       }
     },
 
@@ -115,35 +115,35 @@ module.exports = function (grunt) {
       },
       bootstrap: {
         src: '<%= concat.bootstrap.dest %>',
-        dest: 'dist/js/<%= pkg.name %>.min.js'
+        dest: 'dist/app/<%= pkg.name %>.min.app'
       },
       customize: {
         src: [
-          'docs/assets/js/_vendor/less.min.js',
-          'docs/assets/js/_vendor/jszip.min.js',
-          'docs/assets/js/_vendor/uglify.min.js',
-          'docs/assets/js/_vendor/blob.js',
-          'docs/assets/js/_vendor/filesaver.js',
-          'docs/assets/js/raw-files.min.js',
-          'docs/assets/js/_src/customizer.js'
+          'docs/assets/app/_vendor/less.min.app',
+          'docs/assets/app/_vendor/jszip.min.app',
+          'docs/assets/app/_vendor/uglify.min.app',
+          'docs/assets/app/_vendor/blob.app',
+          'docs/assets/app/_vendor/filesaver.app',
+          'docs/assets/app/raw-files.min.app',
+          'docs/assets/app/_src/customizer.app'
         ],
-        dest: 'docs/assets/js/customize.min.js'
+        dest: 'docs/assets/app/customize.min.app'
       },
       docsJs: {
         src: [
-          'docs/assets/js/_vendor/holder.js',
-          'docs/assets/js/_vendor/ZeroClipboard.min.js',
-          'docs/assets/js/_src/application.js'
+          'docs/assets/app/_vendor/holder.app',
+          'docs/assets/app/_vendor/ZeroClipboard.min.app',
+          'docs/assets/app/_src/application.app'
         ],
-        dest: 'docs/assets/js/docs.min.js'
+        dest: 'docs/assets/app/docs.min.app'
       }
     },
 
     qunit: {
       options: {
-        inject: 'js/tests/unit/phantom.js'
+        inject: 'app/tests/unit/phantom.app'
       },
-      files: 'js/tests/index.html'
+      files: 'app/tests/index.html'
     },
 
     less: {
@@ -293,7 +293,7 @@ module.exports = function (grunt) {
         expand: true,
         cwd: './dist',
         src: [
-          '{css,js}/*.min.*',
+          '{css,app}/*.min.*',
           'css/*.map',
           'fonts/*'
         ],
@@ -380,7 +380,7 @@ module.exports = function (grunt) {
           build: process.env.TRAVIS_JOB_ID,
           concurrency: 10,
           maxRetries: 3,
-          urls: ['http://127.0.0.1:3000/js/tests/index.html'],
+          urls: ['http://127.0.0.1:3000/app/tests/index.html'],
           browsers: grunt.file.readYAML('grunt/sauce_browsers.yml')
         }
       }
@@ -423,7 +423,7 @@ module.exports = function (grunt) {
   // Only run Sauce Labs tests if there's a Sauce access key
   if (typeof process.env.SAUCE_ACCESS_KEY !== 'undefined' &&
       // Skip Sauce if running a different subset of the test suite
-      runSubset('sauce-js-unit') &&
+      runSubset('sauce-app-unit') &&
       // Skip Sauce on Travis when [skip sauce] is in the commit message
       isUndefOrNonZero(process.env.TWBS_DO_SAUCE)) {
     testSubtasks.push('connect');
@@ -432,7 +432,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', testSubtasks);
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['concat', 'uglify']);
+  grunt.registerTask('dist-app', ['concat', 'uglify']);
 
   // CSS distribution task.
   grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme']);
@@ -442,7 +442,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-docs', 'copy:docs');
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css', 'copy:fonts', 'dist-js', 'dist-docs']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'copy:fonts', 'dist-app', 'dist-docs']);
 
   // Default task.
   grunt.registerTask('default', ['test', 'dist', 'build-glyphicons-data', 'build-customizer']);

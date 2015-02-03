@@ -63,7 +63,7 @@
     "node": "~0.10.1"
   },
   "jspm": {
-    "main": "js/bootstrap",
+    "main": "app/bootstrap",
     "directories": {
       "example": "examples",
       "lib": "dist"

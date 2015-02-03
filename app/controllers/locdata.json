@@ -1,0 +1,103 @@
+{
+
+    "venues":[
+    {
+        "id":"52b331da498e25c00246191c",
+        "name":"Cevichería Super Ceviche",
+        "contact":{
+
+        },
+        "location":{
+            "lat":-12.057003040614077,
+            "lng":-77.03788502886489,
+            "cc":"PE",
+            "country":"Perú",
+            "formattedAddress":[
+                "Perú"
+            ]
+        },
+        "categories":[
+            {
+                "id":"4eb1bfa43b7b52c0e1adc2e8",
+                "name":"Peruvian Restaurant",
+                "pluralName":"Peruvian Restaurants",
+                "shortName":"Peruvian",
+                "icon":{
+                    "prefix":"https://ss3.4sqi.net/img/categories_v2/food/peruvian_",
+                    "suffix":".png"
+                },
+                "primary":true
+            }
+        ],
+        "verified":false,
+        "stats":{
+            "checkinsCount":7,
+            "usersCount":1,
+            "tipCount":0
+        },
+        "specials":{
+            "count":0,
+            "items":[
+
+            ]
+        },
+        "hereNow":{
+            "count":0,
+            "summary":"Nobody here",
+            "groups":[
+
+            ]
+        },
+        "referralId":"v-1422997731"
+    },
+    {
+        "id":"53ea6a1b498eb1c0147ecc83",
+        "name":"ceviche de carretilla @ngel",
+        "contact":{
+
+        },
+        "location":{
+            "lat":-12.033483505249023,
+            "lng":-77.03278350830078,
+            "cc":"PE",
+            "country":"Perú",
+            "formattedAddress":[
+                "Perú"
+            ]
+        },
+        "categories":[
+            {
+                "id":"52e81612bcbc57f1066b7a00",
+                "name":"Comfort Food Restaurant",
+                "pluralName":"Comfort Food Restaurants",
+                "shortName":"Comfort Food",
+                "icon":{
+                    "prefix":"https://ss3.4sqi.net/img/categories_v2/food/default_",
+                    "suffix":".png"
+                },
+                "primary":true
+            }
+        ],
+        "verified":false,
+        "stats":{
+            "checkinsCount":2,
+            "usersCount":2,
+            "tipCount":1
+        },
+        "specials":{
+            "count":0,
+            "items":[
+
+            ]
+        },
+        "hereNow":{
+            "count":0,
+            "summary":"Nobody here",
+            "groups":[
+
+            ]
+        },
+        "referralId":"v-1422997731"
+    }
+]
+}
