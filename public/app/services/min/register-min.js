@@ -1,0 +1,1 @@
+onCallApp.constant("dataUrl","http://localhost:5500/providers"),onCallApp.controller("RegisterController",function(t,o,r,s){t.data={},r.get(s).success(function(o){t.data.providers=o}),t.registeruser=function(o){r.post(s,o).success(function(o){t.data.provider.push(o)})}});

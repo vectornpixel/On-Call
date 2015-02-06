@@ -1,1 +1,0 @@
-onCallApp.config(["$routeProvider",function(e){e.when("/explore",{templateUrl:"components/explore/exploreView.html",controller:"ExploreController"}).otherwise({redirectTo:"/login"})}]);

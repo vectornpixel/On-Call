@@ -1,0 +1,45 @@
+{
+	"type": "UserCollection",
+	"properties": {
+		"email": {
+			"name": "email",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "email",
+			"order": 0
+		},
+		"location": {
+			"name": "location",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "location",
+			"order": 1
+		},
+		"photo": {
+			"name": "photo",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "photo",
+			"order": 2
+		},
+		"businessname": {
+			"name": "businessname",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "businessname",
+			"order": 3
+		},
+		"fullname": {
+			"name": "fullname",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "fullname",
+			"order": 4
+		}
+	}
+}
